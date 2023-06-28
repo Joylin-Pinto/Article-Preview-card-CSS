@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: hsl(210, 46%, 95%);
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: 'Manrope', sans-serif;
+}
+main {
+    width: 55%;
+    height: 348px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color:white;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+  }
+  
+  .drawers { 
+    width: 40%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+  .drawers img{ 
+    height: 100%;
+  }
+  
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 1; 
+    padding: 50px ;
+    overflow: hidden;
+    color: hsl(217, 19%, 35%);
+  }
+.card-content p:first-of-type{
+    margin-right: 10px;
+    font-weight: 700;
+    font-size: 22px;      
+    word-spacing: 2px;
+    letter-spacing: .4px;
+    font-family: 'Manrope', sans-serif;
+}
+.card-content p{
+    margin-right: 10px;
+    font-weight: 500;
+    font-size: 14px;     
+     word-spacing: 2px;
+     font-family: 'Manrope', sans-serif;
+
+}
+.footer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+  .avatar{  
+    width: 50px;
+    height: 50px;
+    border-radius: 50% ;
+     margin-right: 20px;
+}
+.footer .profile{
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+} 
+ 
+.name-tag p:first-of-type{
+    font-size: 13px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 100;
+}
+.share-content{
+    opacity: 0;
+    transition: opacity 0.3s ease;    
+    width: 15%;
+    background-color: hsl(217, 19%, 35%); 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    color: aliceblue;
+    border-radius: 10px;
+    position: absolute;
+    transform: translateY(62%) translateX(130%);
+    padding: 5px 10px; 
+    display: none;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+}
+.share-content.show {
+    opacity: 1;
+  }
+.share-icon:hover{
+    cursor: pointer;
+}
+.share-content:first-of-type{
+    color:  hsl(210, 46%, 95%);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 13px;
+
+}
+.share-icon{
+    background-color: hsl(210, 46%, 95%);
+    width: 50px;
+    height:50px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.share-content:after {
+    content: " ";
+    position: absolute;
+    right: 90px;
+    bottom: -13px;
+    border-top: 15px solid hsl(217, 19%, 35%);
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    border-bottom: none;
+  }
+
+  @media only screen and (max-width: 375px){
+    body{
+        background-color: rgb(50, 61, 61);
+    }
+    main{
+        flex-direction: column;
+        width: 80%;
+        height: 570px;
+        justify-content: center;
+    }
+    .drawers { 
+        width: max-content;
+        height: 42%;
+        overflow: hidden;
+    }
+    .card-content{
+        padding: 15px;
+        justify-content: space-evenly; 
+        margin: 0;
+        padding-top: 0;
+    }
+    .card-content p:first-of-type{
+        margin-right:0px;
+        font-size: 1.1rem;
+        word-spacing: 2px;
+        letter-spacing: 0px;
+        margin: 0;
+    
+    }
+    .card-content p{
+        word-spacing: 1px;
+        justify-self: flex-start;
+    }
+    .share-content{
+        display: none;
+    }
+    .name-tag{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+    }
+    .name-tag p:first-of-type{
+        padding: 0;
+        margin: 0;
+        font-size: 1rem;
+        margin: 0;
+    }
+    .name-tag p{
+        padding: 0;
+        margin: 0;
+        font-size: .8rem;
+        
+    }
+    .share-content{
+        opacity: 0;
+        transition: opacity 0.3s ease;    
+        width: 75%;
+        height: 13%;
+        background-color: hsl(217, 19%, 35%); 
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 15px;
+        align-items: center;
+        color: aliceblue;
+        border-radius: 10px;
+        position: absolute;
+        transform: translateY(239%) translateX(0.2%); 
+    }
+    .share-icon{
+        z-index: 1; 
+    }
+     
+    .share-content:after {
+        content: " ";
+        position: absolute;
+        display: none;
+      }
+      .share-content .icon{
+        margin-right: 10px;
+      }
+
+  }
